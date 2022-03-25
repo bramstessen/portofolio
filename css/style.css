@@ -151,11 +151,11 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
     #logo{
         position: relative;
-        margin-left: calc(50vw - (640px / 2));
+        margin-left: calc(50vw - (34vw / 2));
         margin-top: 20vh;
         filter: grayscale(100);
         transition: all 150ms ease-in-out;
-        max-width: 660px;
+        max-width: 34vw;
     }
     #logo:hover{
         filter: grayscale(0);
@@ -171,7 +171,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     section .typer{
         margin: 150px 20px; 
         text-align: center;
-        
+
     }
     .typer:hover a{
         color: #fff;
@@ -181,13 +181,13 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         width: 99vw;
         height: 110vh;
     }
-    #s-one{
+    /* #s-one{
         position: absolute;
         top:0px;
         left: 5%;
         height: 110vh;  
-    }
-    #s-two{
+    } */
+    /* #s-two{
         position: absolute;
         top:calc(110vh - 8px);
         left: 5%;
@@ -195,32 +195,33 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     }
     #side-one{
         position: absolute;
-        top:20vh;
+        top:30vh;
         left: 8%;
         width: 5vw; 
-    }
+    } */
    
 
 
 /* about me */
+/* 
+    #side-two{
+        position: relative;
+        height: 100px;
+        left:60vw;
+        margin-top: 20px;
 
-#side-two{
-    position: relative;
-    height: 100px;
-    left:57vw;
-    margin-top: 20px;
-
-}
-#s-three{
-    position: absolute;
-    height: 400px;
-    right:calc(4vw);
-    top: calc(110vh - 8px);
-}
+    }
+    #s-three{
+        position: absolute;
+        height: 400px;
+        right:calc(4vw);
+        top: calc(110vh - 8px);
+    } */
 
     #about{
-        margin-top: 80px;
-        height: 100vh;
+        margin-top: 30px;
+        display: block;
+
     }
 
     #about .flexbox{
@@ -228,29 +229,31 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         height: fit-content;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: right;
-        gap: 50px;
+        justify-content: center;
+        gap: 10vw;
     }
     #about .img-sectie{
         order: 2;
-        margin-right: 115px;
+        margin-left: 40px;
         flex-shrink: 10;
+       
     }
     #about .text-sectie{
-        max-width: 700px;
-        margin: 50px 2vw 0 0;
+        max-width: 600px;
+        margin: 75px 30px 0 0;
         order:1;
         flex-shrink: 20;
+       
     }
 
-#s-four{
-    margin-right: calc(4vw );
-    order: 0;
-    flex-shrink: 0;
-}
+    /* #s-four{
+        margin-right: 4vw;
+        order: 0;
+        flex-shrink: 0;
+    }    */
 
     #about img{
-        max-width: 100%;
+        max-width: 90%;
     }
 
     .img-sectie img:nth-child(1) {
@@ -259,11 +262,34 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     }
     .img-sectie img:nth-child(2) {
        padding-bottom: 40px;
+       margin-top: 10px;
     }
     .img-sectie img:nth-child(3) {
         margin-top: 20px;
         margin-left: 10px;
     }
+    /* #s-five{
+        position: relative;
+        left: 5%;
+        width: 90vw;
+    }
+    #s-six{
+        position: relative;
+        height: 400px;
+        left: 94.7vw;
+    } */
     
-    
-    
+    @media only screen and (max-width: 1400px) {
+        #about img{
+            max-width: 40%;
+        }
+        #about .img-sectie{
+            margin-top: 40px;
+        }
+    }
+
+
+/* skils */
+#skils{
+    height: 200vh;
+}

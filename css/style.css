@@ -89,6 +89,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         color: #EFCA08;
         transition: all 200ms ease-in;
         cursor: default;
+        line-height: 1.8rem;
     }
 
     h3{
@@ -126,6 +127,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* header */
     header{
+        top: 0;
         z-index: 1;
         position: fixed;
         width: 100vw;
@@ -146,78 +148,38 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     header a:last-of-type{
         margin-right: 0;
     }
-
+    
 
 /* home */
 
     #logo{
-        position: relative;
-        margin-left: calc(50vw - (34vw / 2));
-        margin-top: 20vh;
-        filter: grayscale(100);
+        display: block;
+        max-width: 50vw;
+        margin:0px auto 0 auto;
         transition: all 150ms ease-in-out;
-        max-width: 30vw;
-    }
-    #logo:hover{
-        filter: grayscale(0);
     }
     section a{
         color:#EFCA08; 
         font-family: 'Roboto Mono', monospace;
-        
         font-size: 2.5rem;
         line-height: 90px; 
  
     }
     section .typer{
-        margin: 100px 20px; 
+        margin: 100px 30px; 
         text-align: center;
 
     }
     .typer:hover a{
         color: #fff;
-
     }
     #home{
-        width: 99vw;
-        height: 110vh;
+        padding:20vh 0 200px 0;
     }
-    /* #s-one{
-        position: absolute;
-        top:0px;
-        left: 5%;
-        height: 110vh;  
-    } */
-    /* #s-two{
-        position: absolute;
-        top:calc(110vh - 8px);
-        left: 5%;
-        width: 90vw;
-    }
-    #side-one{
-        position: absolute;
-        top:30vh;
-        left: 8%;
-        width: 5vw; 
-    } */
+
    
 
-
 /* about me */
-/* 
-    #side-two{
-        position: relative;
-        height: 100px;
-        left:60vw;
-        margin-top: 20px;
-
-    }
-    #s-three{
-        position: absolute;
-        height: 400px;
-        right:calc(4vw);
-        top: calc(110vh - 8px);
-    } */
 
     #about{
         margin-top: 30px;
@@ -226,32 +188,22 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     }
 
     #about .flexbox{
-        
         height: fit-content;
-        display: flex;
-        flex-direction: row-reverse;
-        justify-content: center;
-        gap: 5vw;
+      
     }
     #about .img-sectie{
-        order: 2;
-        margin-left: 40px;
-        flex-shrink: 1;
+        margin-left: 15vw;
+        float: left;
+        width: 40vw;
        
     }
     #about .text-sectie{
         max-width: 30vw;
-        margin: 75px 30px 0 0;
-        order:1;
-        flex-shrink: 1;
+        margin: 5vw 10vw 0 0;
+        float: right;
+      
        
     }
-
-    /* #s-four{
-        margin-right: 4vw;
-        order: 0;
-        flex-shrink: 0;
-    }    */
 
     #about img{
         max-width: 40%;
@@ -260,6 +212,7 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     .img-sectie img:nth-child(1) {
         display: block;
         margin-left: 50px;
+        margin-right: 0px;
     }
     .img-sectie img:nth-child(2) {
        padding-bottom: 40px;
@@ -269,48 +222,32 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
         margin-top: 20px;
         margin-left: 10px;
     }
-    /* #s-five{
-        position: relative;
-        left: 5%;
-        width: 90vw;
-    }
-    #s-six{
-        position: relative;
-        height: 400px;
-        left: 94.7vw;
-    } */
-    
-    @media only screen and (max-width: 1080px) {
-        #about img{
-            max-width: 20%;
-        }
-    }
-
+   
 
 /* skils */
     #skils{
-        margin-top: 200px;
+        padding-top: 200px;
+        clear: both;
     }
     #skils h1{
         text-align: center;
         margin-bottom: 50px;
     }
     #skils .flex-wrap{
-        max-width: 60vw;
-        margin: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        flex-wrap: wrap;
-        align-content: center;
+        margin:100px auto;
+        max-width: 80%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        grid-auto-rows: minmax(100px, auto);
+        row-gap: 100px;
+
     }
     .skill-icon{
-        flex: 1 0 20%;
         text-align: center;
-        margin: 20px 20px 40px 20px;
     }
     .skill-icon img{
-        max-width: 100%;
+        max-width: 70%;
     }
     .skill-icon p{
         margin-top: 1rem;
@@ -319,39 +256,89 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 
 /* projects */
 #projects{
+    position: relative;
     margin-top: 250px;
     text-align: center;
+    clear: both;
+   overflow: hidden;
+   padding-bottom: 200px;
+}
+#projects::before{
+   content: '';
+   display: block;
+   background-color: aqua;
+   width: 50px;
+   height: 100%;
+
 }
 #lijn-project{
     position: absolute;
-    height: 300vh;
-    margin-top: 10px;
+    height: 2000vh;
+    margin-top: 2rem;
     left: 50%;
 }
+#pijl1{
+    position: absolute;
+    height: 50px;
+    margin-top: calc(400vh - 10px);
+    left: calc(50% + 17px);
+    transform: rotate(45deg);
+}
+#pijl2{
+    position: absolute;
+    height: 50px;
+    margin-top: calc(400vh - 10px);
+    left: calc(50% - 17px);
+    transform: rotate(-45deg);
+}
+
+#lijn-project1{
+    position: relative;
+    height: 200px;
+    margin-top: 0px;
+    left: 50%;
+    border-top-left-radius: 0px ;
+    border-top-right-radius: 0px;
+}
+#pijl3{
+    position: relative;
+    height: 50px;
+    left: calc(50% + 17px);
+    transform: rotate(45deg);
+    bottom: 75px;
+}
+#pijl4{
+    position: relative;
+    height: 50px;
+    bottom: 25px;
+    left: calc(50% - 17px);
+    transform: rotate(-45deg);
+}
+
 .project{
-    
     max-width: 49vw;
     text-align: center;
     display: block;
+    background-color: black;
+    
 }
 .project h2{
     display: block;
     cursor: pointer;
-    height: 55px;
+    margin-top:0;
 }
 .project img{
     max-width: 40px;
 }
 .video-wrap{
-    width: 300px;
-    height: 200px;
-    border-radius: 20px;
+    max-width: 300px;
     overflow: hidden;
     margin: 0 auto;
     
 }
-.video-wrap video{
-    transform: translate(-20px,0px);
+ video{
+    max-width: 300px;
+    border-radius: 20px;
 }
 .lijn-project{
     position: relative;
@@ -368,31 +355,32 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     
 }
 .project:nth-of-type(2){
-    margin-left: 50vw;
+    margin: 0 0 0 51vw;
 }
 .project:nth-of-type(2) .lijn-project{
     margin-left: 10%;
 }
-.project:nth-of-type(2) .video-wrap{
-    height: 170px;
-}
+
 
 .project:nth-of-type(2) .video{
     transform: translate(0,0px);
 }
 
-.project:nth-of-type(3) .video-wrap{
+.project:nth-of-type(3) img{
     width: 200px;
 }
 #cda-img{
     max-width: 100%;
 }
-
 .project:nth-of-type(4){
-    margin-left: 50vw;
+    margin: 0 0 0 51vw;
 }
 .project:nth-of-type(4) .lijn-project{
     margin-left: 10%;
+}
+.project:nth-of-type(4)  h2{
+    
+    margin-top: 2rem;
 }
 .project:nth-of-type(4) .video-wrap{
     width: 200px;
@@ -407,6 +395,166 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
     height: 290px;
     border-radius:15px;  
 }
-.project:nth-of-type(4) video{
-    transform: translate(0px,0px);
+.project:nth-of-type(5)  h2{
+    
+    margin-top: 2rem;
+}
+.project:nth-of-type(6){
+    margin: 0 0 0 51vw;
+}
+.project:nth-of-type(6) .lijn-project{
+    margin-left: 10%;
+}
+.project:nth-of-type(6) img{
+    width: 60%; 
+    
+}
+
+
+
+
+
+/* contact */
+#contact{
+    margin-bottom: 25vh;
+}
+#contact a{
+    display:block;
+    width: 20vw;
+    margin: 0 auto;
+    min-width: 300px;
+    
+
+}
+#contact img{
+    display: inline;
+    max-width: 20%;
+    vertical-align:middle;
+}
+#contact p{
+    display: inline;
+    text-align: center;
+    cursor: pointer;
+    vertical-align:middle;
+    color: #EFCA08;
+
+}
+
+
+@media only screen and (max-width: 920px) {
+    .lijn-project{
+        display: none;
+    }
+    .project:nth-of-type(1){
+        margin: 140px auto 40px auto !important;
+        
+    }
+    .project{
+        margin: 100px auto 100px auto !important;
+        padding: 50px 0 50px 0;
+    }
+    
+    #projects{
+        min-height: 400vh;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    section a{
+        font-size: 2rem;
+    }
+    .hoverFilter{
+        filter: grayscale(0);
+    }
+    .project.hoverFilter{
+        filter: grayscale(0);
+    }
+    .skill-icon img{
+        max-width: 60%;}
+        #skils .flex-wrap{
+            margin:100px auto;
+            max-width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            grid-auto-rows: minmax(100px, auto);
+            row-gap: 100px;
+        }
+        #about .img-sectie{
+            margin: 0 35%;
+            float: none;
+            width: 50vw;
+           
+        }
+        #about .text-sectie{
+            max-width: 60vw;
+            margin: 100px auto;
+            float: none;
+          
+           
+        }
+}
+@media only screen and (max-width: 426px) {
+    section a{
+        font-size: 1.5rem;
+
+    }
+    #home{
+        padding:30vh 0 200px 0;
+    }
+    section .typer{
+        margin: 50px 30px; 
+    }
+    #logo{
+        display: block;
+        max-width: 70vw;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    h2{
+        font-size: 1.5rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+    h1:hover{
+        color: #EFCA08;
+    }
+
+    h2:hover{
+        color: #EFCA08;
+    }
+
+    h3:hover{
+        color: #E9EBFF;
+    }
+
+    p:hover{
+        color: #E9EBFF;
+    }  
+    #about .text-sectie{
+        max-width: 90vw;
+        
+       
+    } 
+    #about .img-sectie{
+        margin: 0 0 0 10vw;
+        float: none;
+        width: 90vw;
+       
+    }
+    header a{
+        margin-right: 8vw;
+        font-size: 13px;
+    }
+    .project{
+        max-width: 70vw;
+    }
+    .project:nth-of-type(6) h2{
+       font-size: 1rem;
+    }
+    #contact p{
+        color: #E9EBFF;
+    }
 }
